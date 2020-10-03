@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ (routine | async)?.routineName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <h5>{{ (routine | async)?.day }}</h5>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2>{{ (routine | async)?.exerciseOne }}</h2>
+      <p>
+        Sets: {{ (routine | async)?.setsOne }}
+        Reps: {{ (routine | async)?.repsOne }}
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h2>{{ (routine | async)?.exerciseTwo }}</h2>
+      <p>
+        Sets: {{ (routine | async)?.setsTwo }}
+        Reps: {{ (routine | async)?.repsTwo }}
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h2>{{ (routine | async)?.exerciseThree }}</h2>
+      <p>
+        Sets: {{ (routine | async)?.setsThree }}
+        Reps: {{ (routine | async)?.repsThree }}
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h2>{{ (routine | async)?.exerciseFour }}</h2>
+      <p>
+        Sets: {{ (routine | async)?.setsFour }}
+        Reps: {{ (routine | async)?.repsFour }}
+      </p>
+    </ion-label>
+  </ion-item>
+
+</ion-content>
+
+
+  <ion-footer>
+    <ion-button expand="block" (click)="deleteRoutine()"> Delete Routine </ion-button>
+    <ion-toolbar>
+      <p>{{currentDate}}</p>
+    </ion-toolbar>
+  </ion-footer>

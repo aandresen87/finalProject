@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Routine</ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card padding>
+
+    <form [formGroup]="createRoutineForm" (submit)="createRoutine()">
+      <ion-item>
+        <ion-label stacked>Routine Name</ion-label>
+        <ion-input formControlName="routineName" type="text" placeholder="Enter routine name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Day</ion-label>
+        <ion-input formControlName="day" type="text" placeholder="Enter day of the week">
+        </ion-input>
+      </ion-item>
+
+      <br>
+      <br>
+
+      <ion-item>
+        <ion-label stacked>Exercise 1</ion-label>
+        <ion-input formControlName="exerciseOne" type="text" placeholder="Enter exercise name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Sets</ion-label>
+        <ion-textarea formControlName="setsOne" type="text" placeholder="Enter number of sets">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Reps</ion-label>
+        <ion-textarea formControlName="repsOne" type="text" placeholder="Enter number of reps">
+        </ion-textarea>
+      </ion-item>
+
+      <br>
+      <br>
+
+
+      <ion-item>
+        <ion-label stacked>Exercise 2</ion-label>
+        <ion-input formControlName="exerciseTwo" type="text" placeholder="Enter exercise name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Sets</ion-label>
+        <ion-textarea formControlName="setsTwo" type="text" placeholder="Enter number of sets">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Reps</ion-label>
+        <ion-textarea formControlName="repsTwo" type="text" placeholder="Enter number of reps">
+        </ion-textarea>
+      </ion-item>
+
+      <br>
+      <br>
+
+
+      <ion-item>
+        <ion-label stacked>Exercise 3</ion-label>
+        <ion-input formControlName="exerciseThree" type="text" placeholder="Enter exercise name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Sets</ion-label>
+        <ion-textarea formControlName="setsThree" type="text" placeholder="Enter number of sets">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Reps</ion-label>
+        <ion-textarea formControlName="repsThree" type="text" placeholder="Enter number of reps">
+        </ion-textarea>
+      </ion-item>
+
+      <br>
+      <br>
+
+
+      <ion-item>
+        <ion-label stacked>Exercise 4</ion-label>
+        <ion-input formControlName="exerciseFour" type="text" placeholder="Enter exercise name">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Sets</ion-label>
+        <ion-textarea formControlName="setsFour" type="text" placeholder="Enter number of sets">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Reps</ion-label>
+        <ion-textarea formControlName="repsFour" type="text" placeholder="Enter number of reps">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" [disabled]="!createRoutineForm.valid">
+        Add Routine
+      </ion-button>
+
+    </form>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{currentDate}}</p>
+  </ion-toolbar>
+</ion-footer>

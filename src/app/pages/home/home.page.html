@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>
+      <h6>Physique Fitness</h6>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/create">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <img src="assets/logo/pLogoBar.png" alt="" />
+  </ion-card>
+
+  <ion-item lines="none">
+    <ion-label>
+      <h1>Routines</h1>
+    </ion-label>
+  </ion-item>
+
+  <ion-card *ngFor="let routine of routineList | async" routerLink="/detail/{{routine.id}}">
+    <ion-card-header>
+      <h2>{{ routine.routineName }}</h2>
+    </ion-card-header>
+    <ion-card-content> {{ routine.day }} </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/gallery">
+      <ion-icon name="images-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{currentDate}}</p>
+  </ion-toolbar>
+</ion-footer>

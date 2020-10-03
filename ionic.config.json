@@ -1,0 +1,8 @@
+{
+  "name": "fitness-tracker",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "efc60145"
+}
